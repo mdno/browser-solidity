@@ -105,9 +105,9 @@ function Editor () {
     editor.getSession().setAnnotations(sourceAnnotations)
   }
 
-  this.handleErrorClick = function (errLine, errCol) {
+  this.gotoPosition = function (line, col) {
     editor.focus()
-    editor.gotoLine(errLine + 1, errCol - 1, true)
+    editor.gotoLine(line, col, true)
   }
 
   // Do setup on initialisation here

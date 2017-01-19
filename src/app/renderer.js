@@ -68,7 +68,7 @@ Renderer.prototype.error = function (message, container, options) {
         // Switch to file
         self.switchToFile(errFile)
       }
-      self.editor.handleErrorClick(errLine, errCol)
+      self.editor.gotoPosition(errLine + 1, errCol - 1)
     })
   }
   $error.find('.close').click(function (ev) {
